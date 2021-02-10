@@ -6,6 +6,7 @@ import {
   BackHandler,
   Platform,
   StyleSheet,
+  Alert,
 } from 'react-native';
 
 import * as Natives from './Natives';
@@ -16,7 +17,7 @@ const andAPIlvl = (): string =>
 
 const HEIGHT_BR = 10;
 const BR = () => <Text style={styles.BR}> </Text>;
-const appVer = 'r06, L2A';
+const appVer = 'r09, L2A';
 
 const App = () => {
   return (
@@ -27,18 +28,36 @@ const App = () => {
       <Text style={styles.Text3}>(TypeScript, API: {andAPIlvl()})</Text>
       <BR />
       <Button
-        title="  Bridge Java  "
+        title="Bridge Java"
         onPress={() => {
           Natives.Toast('Java Bridge Test.');
         }}
       />
       <BR />
       <Button
-        title="  Bridge Kotlin  "
+        title="Bridge Kotlin"
         onPress={() => {
           Natives.ToastK('Kotlin Bridge Test.');
         }}
       />
+      <BR />
+      <Button
+        title="BK 2, Promise"
+        onPress={async () => {
+          let res: string = await Natives.test();
+          Alert.alert('kb test 2. res: "' + res + '"');
+        }}
+      />
+      <BR />
+      <Button
+        title="BK 3, Callback"
+        onPress={() => {
+          Natives.testCallback((res: string) => {
+            Alert.alert('kb test 3. res: "' + res + '"');
+          });
+        }}
+      />
+      <BR />
       <BR />
       <Button
         title="  Exit  "

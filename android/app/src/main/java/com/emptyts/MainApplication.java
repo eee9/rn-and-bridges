@@ -11,6 +11,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+import com.mxkpackages.MxKPackages;
 import com.mxrnpackages.MxRNPackages;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -30,7 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
 
           packages.add(new MxRNPackages());
-          packages.add(new Main());
+          packages.add(new MxKPackages());
           return packages;
         }
 

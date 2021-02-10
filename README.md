@@ -1,19 +1,15 @@
-# simple-rn-and
+# bridges-java-kotlin
 
-Just a simple React Native boilerplate, L2A.
-Typescript, Android only, Hermes is on, apk split by abi.
-Latest npm packages (nl-*.txt files).
+React Native boilerplate for test of bridges on Java, Kotlin, L2A.
+Typescript, Android only, Java, Kotlin, Hermes is on, apk split by abi.
 
-Note for distros like MX Linux (Debian like distros, unchecked).
-Insted of:
-  yarn start
-  yarn android
-may run:
-  ss/sss
+Following to:
+Writing a native module for React Native using Kotlin, July 29, 2020
+<https://bitfrit.com/writing-a-native-module-for-react-native-using-kotlin>
 
-Result apk:
- -app-arm64-v8a-release.apk  - 5146173
- -app-armeabi-v7a-elease.apk - 4801716
- -app-x86_64-releae.apk      - 5426401
- -app-x86-release.pk         - 5530653
- -output-metadata.son        -    1202
+About emulators:
+<https://github.com/react-native-community/cli/issues/142>
+
+npx @react-native-community/cli doctor
+emulator -list-avds
+react-native run-android --emulator="Genymotion" --device="Google Nexus 5X" // unchecked

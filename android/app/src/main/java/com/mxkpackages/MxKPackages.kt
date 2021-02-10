@@ -1,5 +1,6 @@
-package com.emptyts
+package com.mxkpackages
 
+import com.emptyts.CustomNative
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
@@ -7,7 +8,7 @@ import com.facebook.react.uimanager.ViewManager
 
 import java.util.ArrayList
 
-class Main : ReactPackage {
+class MxKPackages : ReactPackage {
 
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
         return emptyList()

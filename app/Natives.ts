@@ -1,8 +1,5 @@
 import {NativeModules} from 'react-native';
 
-export const ToastK = (msg: string) => {
-  NativeModules.CustomNative.showK(msg);
-};
 //--------------------------------------------------------------------------------------------------
 // Toast from Android
 export const Toast = (msg: string) => {
@@ -13,6 +10,22 @@ export const ToastLong = (msg: string) => {
 };
 export const testLogcat = (msg: string) => {
   NativeModules.MxRNToast.testLogcat(msg);
+};
+// Kotlin
+export const ToastK = (msg: string) => {
+  NativeModules.MxKToast.show(msg);
+};
+export const ToastLongK = (msg: string) => {
+  NativeModules.MxKToast.showLong(msg);
+};
+export const testPromise = async (): Promise<string> => {
+  return await NativeModules.MxKToast.testPromise();
+};
+export const test = async (): Promise<string> => {
+  return await NativeModules.MxKToast.test();
+};
+export const testCallback = (cb: (r: string) => void) => {
+  NativeModules.MxKToast.testCallback(cb);
 };
 
 //--------------------------------------------------------------------------------------------------
