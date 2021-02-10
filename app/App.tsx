@@ -16,19 +16,27 @@ const andAPIlvl = (): string =>
 
 const HEIGHT_BR = 10;
 const BR = () => <Text style={styles.BR}> </Text>;
-const appVer = 'r04, L2A';
+const appVer = 'r06, L2A';
 
 const App = () => {
   return (
     <View style={styles.MainView}>
       <Text style={styles.Text1}>{appVer}</Text>
       <Text style={styles.Text2}>React Native - Android bridge tests.</Text>
+      <Text style={styles.Text2}>(Kotlin included)</Text>
       <Text style={styles.Text3}>(TypeScript, API: {andAPIlvl()})</Text>
       <BR />
       <Button
         title="  Bridge Java  "
         onPress={() => {
           Natives.Toast('Java Bridge Test.');
+        }}
+      />
+      <BR />
+      <Button
+        title="  Bridge Kotlin  "
+        onPress={() => {
+          Natives.ToastK('Kotlin Bridge Test.');
         }}
       />
       <BR />

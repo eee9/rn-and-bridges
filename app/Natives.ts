@@ -1,5 +1,8 @@
 import {NativeModules} from 'react-native';
 
+export const ToastK = (msg: string) => {
+  NativeModules.CustomNative.showK(msg);
+};
 //--------------------------------------------------------------------------------------------------
 // Toast from Android
 export const Toast = (msg: string) => {
