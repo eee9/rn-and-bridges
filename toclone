@@ -1,0 +1,22 @@
+#/usr/bash
+
+SYMBOLS="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+function Numb2Symb() {
+  r=`expr 0 + $1`
+  c=${SYMBOLS:$r:1}
+  echo "$c"
+}
+
+time=`date +%H%M`
+#echo time=$time
+
+year=$(Numb2Symb `date +%y`)
+mon=$(Numb2Symb `date +%m`)
+day=$(Numb2Symb `date +%d`)
+code=$year$mon$day$time
+#echo code=$code
+
+path=`pwd`_$code
+git clone . $path
+rm $path/.git -rf
