@@ -1,6 +1,6 @@
 // MxRNPackages.java
 
-package com.mxrnpackages;
+package com.mxjpackages;
 
 import android.util.Log;
 
@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MxRNPackages implements ReactPackage {
-    private static String MODULE_NAME = "MaixRNPackages";
+public class MxJPackages implements ReactPackage {
+    private static String MODULE_NAME = "MxJPackages";
     private static String TAG = "Mx " + MODULE_NAME;
     private static void mLog(String msg) {
         Log.d(TAG, msg);
@@ -30,7 +30,7 @@ public class MxRNPackages implements ReactPackage {
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         mLog("In createNativeModules()");
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new MxRNToast(reactContext));
+        modules.add(new MxJToast(reactContext));
         return modules;
     }
 

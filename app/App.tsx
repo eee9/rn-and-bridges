@@ -17,7 +17,7 @@ const andAPIlvl = (): string =>
 
 const HEIGHT_BR = 10;
 const BR = () => <Text style={styles.BR}> </Text>;
-const appVer = 'r09, L2A';
+const appVer = 'r02, L31';
 
 const App = () => {
   return (

@@ -1,6 +1,6 @@
-// MxRNToast.java
+// MxJToast.java
 
-package com.mxrnpackages;
+package com.mxjpackages;
 
 import android.util.Log;
 import android.widget.Toast;
@@ -9,16 +9,16 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
-public class MxRNToast extends ReactContextBaseJavaModule {
+public class MxJToast extends ReactContextBaseJavaModule {
 
-  private static String MODULE_NAME = "MxRNToast";
+  private static String MODULE_NAME = "MxJToast";
   @Override
   public String getName() {
     return MODULE_NAME;
   }
   private static String TAG = MODULE_NAME;
 
-  MxRNToast(ReactApplicationContext context) { super(context); }
+  MxJToast(ReactApplicationContext context) { super(context); }
 
   @ReactMethod
   public void show(String message) {

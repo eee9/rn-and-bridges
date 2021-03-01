@@ -3,13 +3,13 @@ import {NativeModules} from 'react-native';
 //--------------------------------------------------------------------------------------------------
 // Toast from Android
 export const Toast = (msg: string) => {
-  NativeModules.MxRNToast.show(msg);
+  NativeModules.MxJToast.show(msg);
 };
 export const ToastLong = (msg: string) => {
-  NativeModules.MxRNToast.showLong(msg);
+  NativeModules.MxJToast.showLong(msg);
 };
 export const testLogcat = (msg: string) => {
-  NativeModules.MxRNToast.testLogcat(msg);
+  NativeModules.MxJToast.testLogcat(msg);
 };
 // Kotlin
 export const ToastK = (msg: string) => {
@@ -26,22 +26,4 @@ export const test = async (): Promise<string> => {
 };
 export const testCallback = (cb: (r: string) => void) => {
   NativeModules.MxKToast.testCallback(cb);
-};
-
-//--------------------------------------------------------------------------------------------------
-// Fullscreen funcs from Android
-export const toggleFullscreenAnd = () => {
-  NativeModules.MxRNFullScreen.toggle();
-};
-export const enableFullscreenAnd = () => {
-  NativeModules.MxRNFullScreen.enable();
-};
-export const disableFullscreenAnd = () => {
-  NativeModules.MxRNFullScreen.disable();
-};
-export const isFullscreenCBAnd = (cb: (r: string) => void) => {
-  NativeModules.MxRNFullScreen.isFullscreenCB(cb);
-};
-export const isFullscreenAsyncAnd = async (): Promise<boolean> => {
-  return await NativeModules.MxRNFullScreen.isFullscreenAsync();
 };

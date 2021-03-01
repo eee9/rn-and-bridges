@@ -12,7 +12,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import com.mxkpackages.MxKPackages;
-import com.mxrnpackages.MxRNPackages;
+import com.mxjpackages.MxJPackages;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -30,7 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
 
-          packages.add(new MxRNPackages());
+          packages.add(new MxJPackages());
           packages.add(new MxKPackages());
           return packages;
         }
