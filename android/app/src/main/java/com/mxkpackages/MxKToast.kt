@@ -1,4 +1,4 @@
-package com.emptyts
+package com.mxkpackages
 
 import android.widget.Toast
 import com.facebook.react.bridge.*
@@ -30,23 +30,23 @@ class CustomNative(reactContext: ReactApplicationContext) : ReactContextBaseJava
 
   @ReactMethod
   fun show(message: String) {
-    Toast.makeText(reactApplicationContext, "kb: $message", Toast.LENGTH_SHORT).show()
+    Toast.makeText(reactApplicationContext, "Kt: $message", Toast.LENGTH_SHORT).show()
   }
 
   @ReactMethod
   fun showLong(message: String) {
-    Toast.makeText(reactApplicationContext, "kb: $message", Toast.LENGTH_LONG).show()
+    Toast.makeText(reactApplicationContext, "Kt: $message", Toast.LENGTH_LONG).show()
   }
 
   @ReactMethod
   fun testCallback(callback: Callback) {
-    val res = "kb testCallback(), L2A."
+    val res = "Kt testCallback(), L2A."
     callback.invoke(res)
   }
 
   @ReactMethod
   fun testPromise(promise: Promise) {
-    val res = "kb of testPromise(), L2A."
+    val res = "Kt of testPromise(), L2A."
     promise.resolve(res)
   }
 
@@ -58,8 +58,8 @@ class CustomNative(reactContext: ReactApplicationContext) : ReactContextBaseJava
   @ReactMethod
   fun test(promise: Promise) {
     // something from Kotlin
-    var res: String = "res: "
-    for(i in 0..8 step 2) {      // 3
+    var res: String = "Kt res: "
+    for(i in 0..6 step 2) {      // 3
       res += "$i-"
     }
     promise.resolve(res)
